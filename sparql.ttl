@@ -10,14 +10,27 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-<http://www.w3.org/ns/entailment/Overview.html> dc:title "Terms used by SPARQL 1.1" ;
+<http://www.w3.org/ns/sparql/> dc:title "Terms used by SPARQL" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.w3.org/ns/sparql#> a owl:Ontology ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-05-26" ;
-     dc:description "Terms used by SPARQL 1.1" ;
-     owl:versionInfo "2010-05-26 15:16:13" . 
+     dc:date "2026-11-17" ;
+     dc:description "Terms used by SPARQL" ;
+     owl:versionInfo "2026-11-17 18:47:00" . 
+
+sparql:version-1.2 dc:title "SPARQL Query and Update version 1.2" ;
+     rdfs:isDefinedBy <https://www.w3.org/TR/sparql12-query/#versionLabels> . 
+
+sparql:version-1.2-basic dc:title "SPARQL Query and Update version 1.2-basic" ;
+     dc:description "This is a version of SPARQL without triple terms, without triple patterns that have a triple pattern in their subject or object position, but otherwise with all 1.2 features and semantics." ;
+     rdfs:isDefinedBy <https://www.w3.org/TR/sparql12-query/#versionLabels> . 
+
+sparql:version-1.1 dc:title "SPARQL Query and Update version 1.1" ;
+     rdfs:isDefinedBy <https://www.w3.org/TR/sparql12-query/#versionLabels> . 
+
+sparql:version-1.0 dc:title "SPARQL Query version 1.0" ;
+     rdfs:isDefinedBy <https://www.w3.org/TR/sparql12-query/#versionLabels> . 
 
 sparql:bound dc:description "Checks if a variable is bound to a value." ;
      rdfs:isDefinedBy <http://www.w3.org/TR/sparql11-query/#func-bound> . 

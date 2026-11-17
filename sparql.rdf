@@ -5,27 +5,47 @@
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:sparql="http://www.w3.org/ns/sparql#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
     <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
     <foaf:name>Ivan Herman</foaf:name>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/sparql#">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <dc:description>Terms used by SPARQL 1.1</dc:description>
-    <owl:versionInfo>2010-05-26 15:16:13</owl:versionInfo>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+  </foaf:Person>
+
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sparql#">
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <dc:date>2010-05-26</dc:date>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">
-    <dc:title>Terms used by SPARQL 1.1</dc:title>
+    <dc:date>2026-11-17</dc:date>
+    <dc:description>Terms used by SPARQL</dc:description>
+    <owl:versionInfo>2026-11-17 18:47:00</owl:versionInfo>
+  </owl:Ontology>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sparql/">
+    <dc:title>Terms used by SPARQL</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
   </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sparql#version-1.0">
+    <dc:title>SPARQL Query version 1.0</dc:title>
+    <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/sparql12-query/#versionLabels"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sparql#version-1.1">
+    <dc:title>SPARQL Query and Update version 1.1</dc:title>
+    <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/sparql12-query/#versionLabels"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sparql#version-1.2">
+    <dc:title>SPARQL Query and Update version 1.2</dc:title>
+    <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/sparql12-query/#versionLabels"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sparql#version-1.2-basic">
+    <dc:description>This is a version of SPARQL without triple terms, without triple patterns that have a triple pattern in their subject or object position, but otherwise with all 1.2 features and semantics.</dc:description>
+    <dc:title>SPARQL Query and Update version 1.2-basic</dc:title>
+    <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/sparql12-query/#versionLabels"/>
+  </rdf:Description>
+
   <rdf:Description rdf:about="http://www.w3.org/ns/sparql#bound">
     <dc:description>Checks if a variable is bound to a value.</dc:description>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/sparql11-query/#func-bound"/>
